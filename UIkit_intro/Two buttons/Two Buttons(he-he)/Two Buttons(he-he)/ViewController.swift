@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearText(_ sender: UIButton) {
+        label.text = ""
         textField.text = ""
     }
     
