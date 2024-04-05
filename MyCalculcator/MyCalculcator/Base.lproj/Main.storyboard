@@ -28,7 +28,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFF-6D-ZLI"/>
+                                    <action selector="button0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gei-f6-yT0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJP-I4-TfX">
@@ -53,7 +53,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="erase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gft-ZW-XjC"/>
+                                    <action selector="erase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vY4-Xb-qMB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mt-28-KkQ">
@@ -89,7 +89,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gjd-4s-Cfq"/>
+                                    <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pb8-jf-uYZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCp-YG-vm9">
@@ -225,6 +225,9 @@
                                         <color key="strokeColor" systemColor="systemRedColor"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="equal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2Q-vM-uoq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CpV-82-aED">
                                 <rect key="frame" x="271" y="355" width="77" height="77"/>
@@ -237,7 +240,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="division:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Spj-Sc-zXt"/>
+                                    <action selector="divison:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Izb-Be-Gy1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JDG-VR-0AI">
@@ -251,7 +254,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="userTyped" destination="JDG-VR-0AI" id="3lN-Y7-Zfm"/>
+                        <outlet property="userTyped" destination="JDG-VR-0AI" id="zWt-Ch-ZyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -260,7 +263,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="equal.circle" catalog="system" width="128" height="123"/>
+        <image name="equal.circle" catalog="system" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

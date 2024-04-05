@@ -3,7 +3,9 @@
 //  MyCalculcator
 //
 //  Created by Андрей on 15.03.2024.
-//
+// !!!Остановился на том, что нужно проверять состояние num1, возможно нужно добавить третью переменную, которая будет записывать в себя num, а num1 при этом очищать
+//да и в целом нужно выводить только num2 в поле вывода!!!
+
 
 import UIKit
 
@@ -12,115 +14,41 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    var typed = ""
-    var num1 = ""
-    var num2 = ""
-    var result = ""
+    
+    
     @IBOutlet var userTyped: UITextField!
     
-    func checkValue(){
-        if userTyped.text == ""{
-            let value = 0
-            typed.append("\(value)")
-            num2 = typed
-            userTyped.text = typed
-        }
-    }
+    var value : Int = 0
+    var num = ""
+    var typed1 = ""
+    var typed2 = ""
+    
+    
+    
     
     @IBAction func button0(_ sender: UIButton) {
-        let value = 0
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
+        value = 0
+        num.append("\(value)")
+        userTyped.text = num
     }
     
     @IBAction func button1(_ sender: UIButton) {
-        let value = 1
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button2(_ sender: UIButton) {
-        let value = 2
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button3(_ sender: UIButton) {
-        let value = 3
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button4(_ sender: UIButton) {
-        let value = 4
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button5(_ sender: UIButton) {
-        let value = 5
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    @IBAction func button6(_ sender: UIButton) {
-        let value = 6
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button7(_ sender: UIButton) {
-        let value = 7
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button8(_ sender: UIButton) {
-        let value = 8
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    
-    @IBAction func button9(_ sender: UIButton) {
-        let value = 9
-        typed.append("\(value)")
-        num1 = typed
-        userTyped.text = typed
-        checkValue()
-    }
-    @IBAction func erase(_ sender: UIButton) {
-        num1 = ""
-        num2 = ""
-        typed = ""
-        userTyped.text = ""
-    }
-    
-    @IBAction func division(_ sender: UIButton) {
+        value = 1
+        num.append("\(value)")
+        userTyped.text = num
+        
         
     }
     
-    }
-
+    @IBAction func divison(_ sender: UIButton) {
         
+        
+        
+    }
     
-
-
-
-
+    @IBAction func equal(_ sender: UIButton) {
+        print(typed1 , typed2)
+    }
+    
+    
+}
