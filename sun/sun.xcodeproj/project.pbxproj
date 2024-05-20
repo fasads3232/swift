@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		172919302BB43E01000FC0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1729192F2BB43E01000FC0DC /* AppDelegate.swift */; };
-		172919322BB43E01000FC0DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172919312BB43E01000FC0DC /* SceneDelegate.swift */; };
-		172919342BB43E01000FC0DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172919332BB43E01000FC0DC /* ViewController.swift */; };
-		172919372BB43E01000FC0DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172919352BB43E01000FC0DC /* Main.storyboard */; };
-		172919392BB43E02000FC0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172919382BB43E02000FC0DC /* Assets.xcassets */; };
-		1729193C2BB43E02000FC0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1729193A2BB43E02000FC0DC /* LaunchScreen.storyboard */; };
+		176B31E82BF75429008B973C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B31E72BF75429008B973C /* AppDelegate.swift */; };
+		176B31EA2BF75429008B973C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B31E92BF75429008B973C /* SceneDelegate.swift */; };
+		176B31EC2BF75429008B973C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176B31EB2BF75429008B973C /* ViewController.swift */; };
+		176B31EF2BF75429008B973C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 176B31EE2BF75429008B973C /* Base */; };
+		176B31F12BF7542B008B973C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176B31F02BF7542B008B973C /* Assets.xcassets */; };
+		176B31F42BF7542B008B973C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 176B31F32BF7542B008B973C /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1729192C2BB43E01000FC0DC /* NetworkCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1729192F2BB43E01000FC0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		172919312BB43E01000FC0DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		172919332BB43E01000FC0DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		172919362BB43E01000FC0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		172919382BB43E02000FC0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1729193B2BB43E02000FC0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1729193D2BB43E02000FC0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		176B31E42BF75429008B973C /* sun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		176B31E72BF75429008B973C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		176B31E92BF75429008B973C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		176B31EB2BF75429008B973C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		176B31EE2BF75429008B973C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		176B31F02BF7542B008B973C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		176B31F32BF7542B008B973C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		176B31F52BF7542B008B973C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		172919292BB43E01000FC0DC /* Frameworks */ = {
+		176B31E12BF75429008B973C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		172919232BB43E01000FC0DC = {
+		176B31DB2BF75429008B973C = {
 			isa = PBXGroup;
 			children = (
-				1729192E2BB43E01000FC0DC /* NetworkCalculator */,
-				1729192D2BB43E01000FC0DC /* Products */,
+				176B31E62BF75429008B973C /* sun */,
+				176B31E52BF75429008B973C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1729192D2BB43E01000FC0DC /* Products */ = {
+		176B31E52BF75429008B973C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1729192C2BB43E01000FC0DC /* NetworkCalculator.app */,
+				176B31E42BF75429008B973C /* sun.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1729192E2BB43E01000FC0DC /* NetworkCalculator */ = {
+		176B31E62BF75429008B973C /* sun */ = {
 			isa = PBXGroup;
 			children = (
-				1729192F2BB43E01000FC0DC /* AppDelegate.swift */,
-				172919312BB43E01000FC0DC /* SceneDelegate.swift */,
-				172919332BB43E01000FC0DC /* ViewController.swift */,
-				172919352BB43E01000FC0DC /* Main.storyboard */,
-				172919382BB43E02000FC0DC /* Assets.xcassets */,
-				1729193A2BB43E02000FC0DC /* LaunchScreen.storyboard */,
-				1729193D2BB43E02000FC0DC /* Info.plist */,
+				176B31E72BF75429008B973C /* AppDelegate.swift */,
+				176B31E92BF75429008B973C /* SceneDelegate.swift */,
+				176B31EB2BF75429008B973C /* ViewController.swift */,
+				176B31ED2BF75429008B973C /* Main.storyboard */,
+				176B31F02BF7542B008B973C /* Assets.xcassets */,
+				176B31F22BF7542B008B973C /* LaunchScreen.storyboard */,
+				176B31F52BF7542B008B973C /* Info.plist */,
 			);
-			path = NetworkCalculator;
+			path = sun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1729192B2BB43E01000FC0DC /* NetworkCalculator */ = {
+		176B31E32BF75429008B973C /* sun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 172919402BB43E02000FC0DC /* Build configuration list for PBXNativeTarget "NetworkCalculator" */;
+			buildConfigurationList = 176B31F82BF7542B008B973C /* Build configuration list for PBXNativeTarget "sun" */;
 			buildPhases = (
-				172919282BB43E01000FC0DC /* Sources */,
-				172919292BB43E01000FC0DC /* Frameworks */,
-				1729192A2BB43E01000FC0DC /* Resources */,
+				176B31E02BF75429008B973C /* Sources */,
+				176B31E12BF75429008B973C /* Frameworks */,
+				176B31E22BF75429008B973C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NetworkCalculator;
-			productName = NetworkCalculator;
-			productReference = 1729192C2BB43E01000FC0DC /* NetworkCalculator.app */;
+			name = sun;
+			productName = sun;
+			productReference = 176B31E42BF75429008B973C /* sun.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		172919242BB43E01000FC0DC /* Project object */ = {
+		176B31DC2BF75429008B973C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					1729192B2BB43E01000FC0DC = {
-						CreatedOnToolsVersion = 15.2;
+					176B31E32BF75429008B973C = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
-			buildConfigurationList = 172919272BB43E01000FC0DC /* Build configuration list for PBXProject "NetworkCalculator" */;
+			buildConfigurationList = 176B31DF2BF75429008B973C /* Build configuration list for PBXProject "sun" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 172919232BB43E01000FC0DC;
-			productRefGroup = 1729192D2BB43E01000FC0DC /* Products */;
+			mainGroup = 176B31DB2BF75429008B973C;
+			productRefGroup = 176B31E52BF75429008B973C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1729192B2BB43E01000FC0DC /* NetworkCalculator */,
+				176B31E32BF75429008B973C /* sun */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1729192A2BB43E01000FC0DC /* Resources */ = {
+		176B31E22BF75429008B973C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1729193C2BB43E02000FC0DC /* LaunchScreen.storyboard in Resources */,
-				172919392BB43E02000FC0DC /* Assets.xcassets in Resources */,
-				172919372BB43E01000FC0DC /* Main.storyboard in Resources */,
+				176B31F12BF7542B008B973C /* Assets.xcassets in Resources */,
+				176B31F42BF7542B008B973C /* Base in Resources */,
+				176B31EF2BF75429008B973C /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		172919282BB43E01000FC0DC /* Sources */ = {
+		176B31E02BF75429008B973C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172919342BB43E01000FC0DC /* ViewController.swift in Sources */,
-				172919302BB43E01000FC0DC /* AppDelegate.swift in Sources */,
-				172919322BB43E01000FC0DC /* SceneDelegate.swift in Sources */,
+				176B31EC2BF75429008B973C /* ViewController.swift in Sources */,
+				176B31E82BF75429008B973C /* AppDelegate.swift in Sources */,
+				176B31EA2BF75429008B973C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		172919352BB43E01000FC0DC /* Main.storyboard */ = {
+		176B31ED2BF75429008B973C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				172919362BB43E01000FC0DC /* Base */,
+				176B31EE2BF75429008B973C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1729193A2BB43E02000FC0DC /* LaunchScreen.storyboard */ = {
+		176B31F22BF7542B008B973C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1729193B2BB43E02000FC0DC /* Base */,
+				176B31F32BF7542B008B973C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1729193E2BB43E02000FC0DC /* Debug */ = {
+		176B31F62BF7542B008B973C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -229,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		1729193F2BB43E02000FC0DC /* Release */ = {
+		176B31F72BF7542B008B973C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -285,7 +285,7 @@
 			};
 			name = Release;
 		};
-		172919412BB43E02000FC0DC /* Debug */ = {
+		176B31F92BF7542B008B973C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -294,19 +294,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z336L67Z46;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkCalculator/Info.plist;
+				INFOPLIST_FILE = sun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Apple.NetworkCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = Apple.sun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -314,11 +314,11 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		172919422BB43E02000FC0DC /* Release */ = {
+		176B31FA2BF7542B008B973C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -327,19 +327,19 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z336L67Z46;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NetworkCalculator/Info.plist;
+				INFOPLIST_FILE = sun/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Apple.NetworkCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = Apple.sun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -347,32 +347,32 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		172919272BB43E01000FC0DC /* Build configuration list for PBXProject "NetworkCalculator" */ = {
+		176B31DF2BF75429008B973C /* Build configuration list for PBXProject "sun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1729193E2BB43E02000FC0DC /* Debug */,
-				1729193F2BB43E02000FC0DC /* Release */,
+				176B31F62BF7542B008B973C /* Debug */,
+				176B31F72BF7542B008B973C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		172919402BB43E02000FC0DC /* Build configuration list for PBXNativeTarget "NetworkCalculator" */ = {
+		176B31F82BF7542B008B973C /* Build configuration list for PBXNativeTarget "sun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				172919412BB43E02000FC0DC /* Debug */,
-				172919422BB43E02000FC0DC /* Release */,
+				176B31F92BF7542B008B973C /* Debug */,
+				176B31FA2BF7542B008B973C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 172919242BB43E01000FC0DC /* Project object */;
+	rootObject = 176B31DC2BF75429008B973C /* Project object */;
 }
