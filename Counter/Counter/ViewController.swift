@@ -16,12 +16,29 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var eraseCirlce: UIButton!
     @IBOutlet private weak var resultsCircle: UITextView!
     @IBOutlet private weak var clearConsoleCircle: UIButton!
+    @IBOutlet private weak var counterValue: UITextView!
     private var counter: Int = 0
+    override var shouldAutorotate: Bool {
+           return false
+       }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+           return .portrait
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        results.text = "История изменений: \n"
         behindButtons()
+    }
+    private func behindButtons(){
+        addCircle.layer.cornerRadius = 9
+        degreeCircle.layer.cornerRadius = 9
+        eraseCirlce.layer.cornerRadius = 9
+        resultsCircle.layer.cornerRadius = 9
+        clearConsoleCircle.layer.cornerRadius = 9
+        counterValue.layer.cornerRadius = 9
+        results.text = "История изменений: \n"
+        counterValue.text = "Значение счетчика : \(counter)"
     }
     
     @IBAction private func add(_ sender: UIButton) {
@@ -29,36 +46,31 @@ final class ViewController: UIViewController {
         let date = Date()
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: значение изменено на +1 \n")
-    }
-    
-    
-    private func behindButtons(){
-        addCircle.layer.cornerRadius = 9
-        degreeCircle.layer.cornerRadius = 9
-        eraseCirlce.layer.cornerRadius = 9
-        resultsCircle.layer.cornerRadius = 9
-        clearConsoleCircle.layer.cornerRadius = 9
-        
+        counterValue.text = "Значение счетчика : \(counter)"
     }
 
     @IBAction private func degree(_ sender: UIButton) {
         counter -= 1
-        if counter <= 0{
+        if counter < 0{
             let date = Date()
             let formattedDate = formatDate(date)
             results.text.append("[\(formattedDate)]: попытка уменьшить значение счётчика ниже 0\n")
+            counter = 0
+            counterValue.text = "Значение счетчика : \(counter)"
             return
         }
         let date = Date()
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: значение изменено на -1 \n")
+        counterValue.text = "Значение счетчика : \(counter)"
     }
 
     @IBAction private func erase(_ sender: Any) {
-        counter = 0
         let date = Date()
         let formattedDate = formatDate(date)
+        counter = 0
         results.text.append("[\(formattedDate)]: значение сброшено \n")
+        counterValue.text = "Значение счетчика : \(counter)"
     }
 
     @IBAction private func clearConsole(_ sender: UIButton) {
@@ -67,6 +79,7 @@ final class ViewController: UIViewController {
         let date = Date()
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: Консоль очищена. Новая история изменений \n")
+        counterValue.text = "Значение счетчика : \(counter)"
     }
     
     private func formatDate(_ date: Date) -> String {
