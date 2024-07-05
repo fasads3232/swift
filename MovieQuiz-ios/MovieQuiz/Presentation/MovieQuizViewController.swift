@@ -1,6 +1,6 @@
 import UIKit
 
-class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
+final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     
     // MARK: - Lifecycle
     private var questionFactory: QuestionFactoryProtocol = QuestionFactory()
