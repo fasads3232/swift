@@ -22,7 +22,7 @@ class AlertPresenter: UIAlertAction, StartNewGame {
             result.completion()
         }
         alert.addAction(action)
-        viewController.present(alert,animated: true, completion: nil)
+        viewController.present(alert, animated: true, completion: nil)
     }
     
     func setup(delegate : AlertPresenterDelegate){
