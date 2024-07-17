@@ -2,11 +2,13 @@ import UIKit
 
 import UIKit
 
-final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, AlertPresenterDelegate {
+final class MovieQuizViewController: UIViewController, StatisticServiceProtocol, QuestionFactoryDelegate, AlertPresenterDelegate {
+    
     
     // MARK: - Lifecycle
     private var questionFactory: QuestionFactoryProtocol = QuestionFactory()
     private let alertPresenter = AlertPresenter()
+    private let statisticService = StatisticService()
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 20
@@ -38,9 +40,26 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     @IBOutlet private weak var noButton: UIButton!
     private var currentQuestionIndex: Int = 0
     private var correctAnswers: Int = 0
-    private let questionsAmount: Int = 11
+    private let questionsAmount: Int = 10
     private var currentQuestion: QuizQuestion?
-
+    // методы
+    
+    var gamesCount: Int {
+        statisticService.gamesCount
+    }
+    
+    var bestGame: GameResult {
+        statisticService.bestGame
+    }
+    
+    var totalAccuracy: Double {
+        statisticService.totalAccuracy
+    }
+    
+    func store(result: GameResult) {
+        statisticService.store(result: statisticService.bestGame)
+    }
+    
     @IBAction private func noButtonClicked(_ sender: UIButton) {
         showAnswerResult(isCorrect: false)
     }
@@ -115,7 +134,11 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     private func showResult(quiz result: QuizResultsViewModel) {
         let alertModel = AlertModel(
             title: result.title,
-            message: result.text,
+            message: """
+            Количество сыграннх квизов : \(statisticService.bestGame.total) \n
+            Рекорд : \(statisticService.bestGame.correct)
+            Средняя точность : \(self.totalAccuracy)
+            """,
             buttonText: result.buttonText,
             completion: { [weak self] in
                 guard let self = self else { return }
@@ -134,66 +157,3 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         alertPresenter.alertStartNewGame(on: self, with: alertModel)
     }
 }
-/*
- Mock-данные
- 
- 
- Картинка: The Godfather
- Настоящий рейтинг: 9,2
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: The Dark Knight
- Настоящий рейтинг: 9
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: Kill Bill
- Настоящий рейтинг: 8,1
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: The Avengers
- Настоящий рейтинг: 8
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: Deadpool
- Настоящий рейтинг: 8
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: The Green Knight
- Настоящий рейтинг: 6,6
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: ДА
- 
- 
- Картинка: Old
- Настоящий рейтинг: 5,8
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: НЕТ
- 
- 
- Картинка: The Ice Age Adventures of Buck Wild
- Настоящий рейтинг: 4,3
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: НЕТ
- 
- 
- Картинка: Tesla
- Настоящий рейтинг: 5,1
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: НЕТ
- 
- 
- Картинка: Vivarium
- Настоящий рейтинг: 5,8
- Вопрос: Рейтинг этого фильма больше чем 6?
- Ответ: НЕТ
-*/
