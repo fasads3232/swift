@@ -1,14 +1,10 @@
 import UIKit
 
-import UIKit
-
-final class MovieQuizViewController: UIViewController, StatisticServiceProtocol, QuestionFactoryDelegate, AlertPresenterDelegate {
-    
-    
+final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, AlertPresenterDelegate {
     // MARK: - Lifecycle
     private var questionFactory: QuestionFactoryProtocol = QuestionFactory()
-    private let alertPresenter = AlertPresenter()
     private let statisticService = StatisticService()
+    private let alertPresenter = AlertPresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 20
@@ -42,24 +38,26 @@ final class MovieQuizViewController: UIViewController, StatisticServiceProtocol,
     private var correctAnswers: Int = 0
     private let questionsAmount: Int = 10
     private var currentQuestion: QuizQuestion?
-    // методы
-    
+
+    //UserDefaults
     var gamesCount: Int {
         statisticService.gamesCount
     }
-    
+
     var bestGame: GameResult {
         statisticService.bestGame
     }
-    
+
     var totalAccuracy: Double {
         statisticService.totalAccuracy
     }
-    
+
     func store(result: GameResult) {
-        statisticService.store(result: statisticService.bestGame)
+        statisticService.store(result: result)
     }
-    
+
+    // методы
+
     @IBAction private func noButtonClicked(_ sender: UIButton) {
         showAnswerResult(isCorrect: false)
     }
@@ -70,8 +68,11 @@ final class MovieQuizViewController: UIViewController, StatisticServiceProtocol,
 
     // функция конвертации
     private func convert(model: QuizQuestion) -> QuizStepViewModel {
-        let viewModel = QuizStepViewModel(image: UIImage(named: model.image) ?? UIImage(),
-        question: model.text,questionNumber: "\(currentQuestionIndex + 1)/\(questionsAmount)")
+        let viewModel = QuizStepViewModel(
+            image: UIImage(named: model.image) ?? UIImage(),
+            question: model.text,
+            questionNumber: "\(currentQuestionIndex + 1)/\(questionsAmount)"
+        )
         return viewModel
     }
 
@@ -85,9 +86,14 @@ final class MovieQuizViewController: UIViewController, StatisticServiceProtocol,
     // в зависимости от результата переходим к следующему вопросу либо показываем финальный экран и алерт
     private func showNextQuestionOrResults() {
         if currentQuestionIndex == questionsAmount - 1 {
-            let text = "Ваш результат: \(correctAnswers)/11"
-            let viewModel = QuizResultsViewModel(title: "Этот раунд окончен!",
-            text: text, buttonText: "Сыграть ещё раз")
+            let result = GameResult(correct: correctAnswers, total: questionsAmount, date: Date())
+            store(result: result)
+            let text = "Ваш результат: \(correctAnswers)/\(questionsAmount)"
+            let viewModel = QuizResultsViewModel(
+                title: "Этот раунд окончен!",
+                text: text,
+                buttonText: "Сыграть ещё раз"
+            )
             showResult(quiz: viewModel)
         } else {
             currentQuestionIndex += 1
@@ -135,9 +141,11 @@ final class MovieQuizViewController: UIViewController, StatisticServiceProtocol,
         let alertModel = AlertModel(
             title: result.title,
             message: """
-            Количество сыграннх квизов : \(statisticService.bestGame.total) \n
-            Рекорд : \(statisticService.bestGame.correct)
-            Средняя точность : \(self.totalAccuracy)
+            Ваш результат: \(correctAnswers)/\(questionsAmount)
+            Количество сыгранных квизов: \(gamesCount)
+            Рекорд: \(bestGame.correct)/\(bestGame.total)
+            Дата рекорда: \(bestGame.date.dateTimeString)
+            Средняя точность: \(totalAccuracy)%
             """,
             buttonText: result.buttonText,
             completion: { [weak self] in
@@ -150,10 +158,11 @@ final class MovieQuizViewController: UIViewController, StatisticServiceProtocol,
 
         alertPresenter.alertStartNewGame(on: self, with: alertModel)
     }
-    
+
     // Реализация метода делегата AlertPresenterDelegate
     func didReceiveAlertModel(alertModel: AlertModel?) {
         guard let alertModel = alertModel else { return }
         alertPresenter.alertStartNewGame(on: self, with: alertModel)
     }
 }
+
