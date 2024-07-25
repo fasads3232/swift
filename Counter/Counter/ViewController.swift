@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 
 final class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        behindButtons()
+        alertNewValue()
+    }
     
     @IBOutlet private weak var results: UITextView!
     @IBOutlet private weak var addCircle: UIButton!
@@ -26,10 +31,25 @@ final class ViewController: UIViewController {
            return .portrait
        }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        behindButtons()
+    private func saveResultCounter(){
+        UserDefaults.standard.set(counter, forKey: "Counter")
     }
+    
+    private func saveResultConsole(){
+        UserDefaults.standard.set(results.text, forKey: "Console")
+    }
+    
+    private func alertNewValue(){
+        DispatchQueue.main.async {
+        let alert = UIAlertController(title: "Предупреждение", message: "Сейчас вы видите результаты предыдущей сессии. \n При попытке изменить значение оно сбросится до нуля, и старые результаты будут перезаписаны.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ок", style: .default){ [weak self] _ in
+            guard self != nil else {return}
+        }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    }
+    
     private func behindButtons(){
         addCircle.layer.cornerRadius = 9
         degreeCircle.layer.cornerRadius = 9
@@ -37,8 +57,14 @@ final class ViewController: UIViewController {
         resultsCircle.layer.cornerRadius = 9
         clearConsoleCircle.layer.cornerRadius = 9
         counterValue.layer.cornerRadius = 9
-        results.text = "История изменений: \n"
-        counterValue.text = "Значение счетчика : \(counter)"
+        results.text = UserDefaults.standard.string(forKey: "Console")
+        counterValue.text = "Значение счетчика : \(UserDefaults.standard.integer(forKey: "Counter"))"
+    }
+    private func clearUserDefaults(){
+        let allValues = UserDefaults.standard.dictionaryRepresentation()
+        allValues.keys.forEach { key in
+            UserDefaults.standard.removeObject(forKey: key)
+        }
     }
     
     @IBAction private func add(_ sender: UIButton) {
@@ -47,6 +73,8 @@ final class ViewController: UIViewController {
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: значение изменено на +1 \n")
         counterValue.text = "Значение счетчика : \(counter)"
+        saveResultCounter()
+        saveResultConsole()
     }
 
     @IBAction private func degree(_ sender: UIButton) {
@@ -63,6 +91,8 @@ final class ViewController: UIViewController {
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: значение изменено на -1 \n")
         counterValue.text = "Значение счетчика : \(counter)"
+        saveResultCounter()
+        saveResultConsole()
     }
 
     @IBAction private func erase(_ sender: Any) {
@@ -71,6 +101,7 @@ final class ViewController: UIViewController {
         counter = 0
         results.text.append("[\(formattedDate)]: значение сброшено \n")
         counterValue.text = "Значение счетчика : \(counter)"
+        clearUserDefaults()
     }
 
     @IBAction private func clearConsole(_ sender: UIButton) {
@@ -80,6 +111,7 @@ final class ViewController: UIViewController {
         let formattedDate = formatDate(date)
         results.text.append("[\(formattedDate)]: Консоль очищена. Новая история изменений \n")
         counterValue.text = "Значение счетчика : \(counter)"
+        clearUserDefaults()
     }
     
     private func formatDate(_ date: Date) -> String {
